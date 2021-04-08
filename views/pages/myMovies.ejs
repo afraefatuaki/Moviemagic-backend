@@ -11,12 +11,19 @@
             <% data.results.forEach(element=> { %>
                 <figure>
 
-                    <img id="small-img" src=<%=`https://image.tmdb.org/t/p/w500${element.poster_path}`%>>
+                    <a href=<%=`/movieDetails/${element.id}`%>><img id="small-img"
+                            src=<%=`https://image.tmdb.org/t/p/w500${element.backdrop_path}`%>></a>
                     <figcaption>
-                        <a href=<%=`/movieDetails/${element.id}`%>>Details</a>
-                        <%=element.title %> <br>
+
+                        <p>
+                            <%=element.title %> <br>
+                        </p>
+
+                        <P>
                             <%="⭐"%>
                                 <%=element.vote_average %>
+                        </p>
+
                     </figcaption>
                 </figure>
                 <% }) %>

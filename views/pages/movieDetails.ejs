@@ -8,33 +8,43 @@
 
 <body>
     <%- include ('../partials/header.ejs') %>
-        <section id="bg-container">
-            <img id="img-details" src=<%=`https://image.tmdb.org/t/p/w500${data.backdrop_path}`%>>
-        </section>
-        <section id="movie-info">
-            <article>
+
+        <section id="movieDetails-container">
+
+            <div id="bg-container">
+
+                <img id="bg-img" src=<%=`https://image.tmdb.org/t/p/w500${data.poster_path}`%>>
+
+            </div>
+            <div id="movie-info">
+
                 <h3>
+
                     <%=data.title %>
+
                 </h3>
                 <p>
-                    <%=data.release_date %>
-                </p>
 
+                    <%=data.release_date %>
+
+                </p>
                 <p>
+
                     <% data.genres.forEach(element=> { %>
                         <li>
                             <%= element.name %>
                         </li>
                         <% }) %>
+
                 </p>
                 <h4>Plot Summary</h4>
                 <p>
                     <%=data.overview %>
                 </p>
-            </article>
+
+            </div>
+
         </section>
-
-
 </body>
 
 </html>
