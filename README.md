@@ -2,7 +2,7 @@
 
   
 
-For this project I used the https://www.themoviedb.org/ API and it also programmed with Node.js
+For this project I used the https://www.themoviedb.org/ API and Node.js.
 The design, color palette and the logo I chose myself. 
 
 In case you´re interestes in seeing the resutls, here is the link: https://secure-refuge-40646.herokuapp.com/
